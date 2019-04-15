@@ -14,10 +14,14 @@ import java.util.Date;
 @Table(name = "thesis")
 public class Thesis {
 
+//    @Id
+//    @SequenceGenerator(name = "seq-gen", sequenceName = "MY_SEQ_GEN", initialValue = 205, allocationSize = 12)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "seq-gen")
+//    @Column(name = "id", nullable = false)
+
     @Id
-    @SequenceGenerator(name = "seq-gen", sequenceName = "MY_SEQ_GEN", initialValue = 205, allocationSize = 12)
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "seq-gen")
-    @Column(name = "id", nullable = false)
+    @Column(name = "id", updatable = false, nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "thesis_title", nullable = false, unique = true)

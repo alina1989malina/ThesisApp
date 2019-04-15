@@ -10,6 +10,7 @@ import pack.thesis.model.Thesis;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class ThesisController {
 
     @Autowired

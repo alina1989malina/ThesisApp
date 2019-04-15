@@ -1,0 +1,34 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Thesis title</th>
+          <th scope="col">Aspirant FIO</th>
+          <th scope="col">Time of defending</th>
+          <th scope="col">Supervisor FIO</th>
+          <th scope="col">Thesis type</th>
+          <th scope="col">Science field</th>
+          <th scope="col">Science code</th>
+          <th scope="col">Organization</th>
+          <th scope="col">Number of pages</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let thesis of theses">
+          <td>{{ thesis.id }}</td>
+          <td>{{ thesis.thesisTitle }}</td>
+          <td>>{{ thesis.aspirantFio }}</td>
+          <td>>{{ thesis.dissDefTime }}</td>
+          <td>>{{ thesis.supervisorFio }}</td>
+          <td>>{{ thesis.thesisType }}</td>
+          <td>>{{ thesis.scienceField }}</td>
+          <td>>{{ thesis.scienceCode }}</td>
+          <td>>{{ thesis.organization }}</td>
+          <td>>{{ thesis.pagesNum }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

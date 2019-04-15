@@ -1,0 +1,71 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #thesisForm="ngForm">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" [(ngModel)]="thesis.thesisTitle" 
+          class="form-control" id="title" name="title" placeholder="Enter thesis title"
+          required #title="ngModel">
+      </div>
+      <div [hidden]="!title.pristine" class="alert alert-danger">Title is required</div>
+      <div class="form-group">
+        <label for="aspirantFio">Aspirant FIO</label>
+        <input type="text" [(ngModel)]="thesis.aspirantFio" 
+          class="form-control" id="aspirantFio" name="aspirantFio" placeholder="Enter aspirant FIO"
+          required #aspirantFio="ngModel">
+        <div [hidden]="!aspirantFio.pristine" class="alert alert-danger">Aspirant FIO is required</div>
+      </div>
+      <div class="form-group">
+        <label for="dissDefTime">Time of defending</label>
+        <input type="text" [(ngModel)]="thesis.dissDefTime" 
+          class="form-control" id="dissDefTime" name="dissDefTime" placeholder="Enter time of defending"
+          required #dissDefTime="ngModel">
+        <div [hidden]="!dissDefTime.pristine" class="alert alert-danger">Time of defending is required</div>
+      </div>
+      <div class="form-group">
+        <label for="supervisorFio">Supervisor FIO</label>
+        <input type="text" [(ngModel)]="thesis.supervisorFio" 
+          class="form-control" id="supervisorFio" name="supervisorFio" placeholder="Enter supervisor FIO"
+          required #supervisorFio="ngModel">
+        <div [hidden]="!supervisorFio.pristine" class="alert alert-danger">Supervisor FIO is required</div>
+      </div>
+      <div class="form-group">
+        <label for="thesisType">Thesis type</label>
+        <input type="text" [(ngModel)]="thesis.thesisType" 
+          class="form-control" id="thesisType" name="thesisType" placeholder="Enter thesis type"
+          required #thesisType="ngModel">
+        <div [hidden]="!thesisType.pristine" class="alert alert-danger">Thesis type is required</div>
+      </div>
+      <div class="form-group">
+        <label for="scienceField">Science field</label>
+        <input type="text" [(ngModel)]="thesis.scienceField" 
+          class="form-control" id="scienceField" name="scienceField" placeholder="Enter science field"
+          required #scienceField="ngModel">
+        <div [hidden]="!scienceField.pristine" class="alert alert-danger">Science field is required</div>
+      </div>
+      <div class="form-group">
+        <label for="scienceCode">Science code</label>
+        <input type="text" [(ngModel)]="thesis.scienceCode" 
+          class="form-control" id="scienceCode" name="scienceCode" placeholder="Enter science code"
+          required #scienceCode="ngModel">
+        <div [hidden]="!scienceCode.pristine" class="alert alert-danger">Science code is required</div>
+      </div>
+      <div class="form-group">
+        <label for="organization">Organization</label>
+        <input type="text" [(ngModel)]="thesis.organization" 
+          class="form-control" id="organization" name="organization" placeholder="Enter organization"
+          required #organization="ngModel">
+        <div [hidden]="!organization.pristine" class="alert alert-danger">organization is required</div>
+      </div>
+      <div class="form-group">
+        <label for="pagesNum">Number of pages</label>
+        <input type="text" [(ngModel)]="thesis.pagesNum" 
+          class="form-control" id="pagesNum" name="pagesNum" placeholder="Enter number of pages"
+          required #pagesNum="ngModel">
+        <div [hidden]="!pagesNum.pristine" class="alert alert-danger">Number of pages is required</div>
+      </div>
+      <button type="submit" [disabled]="!thesisForm.form.valid" class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>
+

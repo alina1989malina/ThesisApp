@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS thesis (
 	pages_num		    INTEGER	      NOT NULL,
 	supervisor_fio  VARCHAR(500)  NOT NULL,
 	aspirant_fio    VARCHAR(500)  NOT NULL,
-	diss_def_time   DATE			    NOT NULL,
+ 	diss_def_time   DATE		NOT NULL,
   science_code    VARCHAR(100)  NOT NULL,
   science_field   VARCHAR(100)  NOT NULL,
   org_title       TEXT          NOT NULL,
