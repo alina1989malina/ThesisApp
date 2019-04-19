@@ -26,7 +26,7 @@ public class SwaggerConfiguration {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("Thesis")
+            .title("ThesisOldSmall")
             .description("API for providing thesis data")
             .version("0.0.1")
             .build();
